@@ -25,7 +25,7 @@ class syntax_plugin_clearfloat extends DokuWiki_Syntax_Plugin {
         return array(
             'author' => 'Michael Klier (chi)',
             'email'  => 'chi@chimeric.de',
-            'date'   => '2006-05-01',
+            'date'   => '2006-05-08',
             'name'   => 'Clearfloat',
             'desc'   => 'Clears previous floats from images etc.',
             'url'    => 'http://www.chimeric.de/dokuwiki/plugins/clearfloat'
