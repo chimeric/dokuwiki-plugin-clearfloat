@@ -46,7 +46,7 @@ class syntax_plugin_clearfloat extends DokuWiki_Syntax_Plugin {
      */
     function connectTo($mode) {
         $this->Lexer->addSpecialPattern('~~CLEARFLOAT~~',$mode,'plugin_clearfloat');
-        $this->Lexer->addSpecialPattern('~~CF~~',$mode,'plugin_clearfloat');
+        $this->Lexer->addSpecialPattern('~~CL~~',$mode,'plugin_clearfloat');
     }
 
     /**
