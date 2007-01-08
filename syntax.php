@@ -25,7 +25,7 @@ class syntax_plugin_clearfloat extends DokuWiki_Syntax_Plugin {
         return array(
             'author' => 'Michael Klier',
             'email'  => 'chi@chimeric.de',
-            'date'   => '2006-01-03',
+            'date'   => '2007-01-08',
             'name'   => 'Clearfloat',
             'desc'   => 'Clears previous floats from images.',
             'url'    => 'http://www.chimeric.de/projects/dokuwiki/plugin/clearfloat'
@@ -37,15 +37,16 @@ class syntax_plugin_clearfloat extends DokuWiki_Syntax_Plugin {
      *
      * Needs to return one of the mode types defined in $PARSER_MODES in parser.php
      */
-    function getType(){ return 'substition'; }
+    function getType()  { return 'substition'; }
     function getPType() { return 'block'; }
-    function getSort() { return 308; }
+    function getSort()  { return 308; }
     
     /**
      * Connect pattern to lexer
      */
     function connectTo($mode) {
         $this->Lexer->addSpecialPattern('~~CLEARFLOAT~~',$mode,'plugin_clearfloat');
+        $this->Lexer->addSpecialPattern('~~CF~~',$mode,'plugin_clearfloat');
     }
 
     /**
@@ -59,10 +60,8 @@ class syntax_plugin_clearfloat extends DokuWiki_Syntax_Plugin {
      * Handles the actual output creation.
      */
     function render($mode, &$renderer, $data) {
-        global $ID;
-
         if($mode == 'xhtml'){
-            $renderer->doc .= '<div class="clearer"></div>';
+            $renderer->doc .= '<div class="clearer"></div>' . DW_LF;
             return true;
         }
         return false;
