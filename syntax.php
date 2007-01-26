@@ -1,6 +1,10 @@
 <?php
 /**
  * DokuWiki Syntax Plugin Clearfloat
+ *
+ * Clears the floating of elements such as images.
+ *
+ * Syntax:  ~~CLEARFLOAT~~ or ~~CL~~
  * 
  * @license GPL 2 (http://www.gnu.org/licenses/gpl.html)
  * @author  Michael Klier <chi@chimeric.de>
@@ -27,7 +31,7 @@ class syntax_plugin_clearfloat extends DokuWiki_Syntax_Plugin {
             'email'  => 'chi@chimeric.de',
             'date'   => '2007-01-08',
             'name'   => 'Clearfloat',
-            'desc'   => 'Clears previous floats from images.',
+            'desc'   => 'Clears the floating of elements such as images.',
             'url'    => 'http://www.chimeric.de/projects/dokuwiki/plugin/clearfloat'
         );
     }
@@ -68,4 +72,4 @@ class syntax_plugin_clearfloat extends DokuWiki_Syntax_Plugin {
     }
 
 }
-//Setup VIM: ex: et ts=4 enc=utf-8 :
+// setup vim:ts=4:sw=4:enc=utf-8:
