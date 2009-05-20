@@ -29,10 +29,10 @@ class syntax_plugin_clearfloat extends DokuWiki_Syntax_Plugin {
         return array(
             'author' => 'Michael Klier',
             'email'  => 'chi@chimeric.de',
-            'date'   => '2007-01-08',
+            'date'   => @file_get_contents(DOKU_PLUGIN.'clearfloat/VERSION'),
             'name'   => 'Clearfloat',
             'desc'   => 'Clears the floating of elements such as images.',
-            'url'    => 'http://www.chimeric.de/projects/dokuwiki/plugin/clearfloat'
+            'url'    => 'http://dokuwiki.org/plugin:clearfloat'
         );
     }
 
